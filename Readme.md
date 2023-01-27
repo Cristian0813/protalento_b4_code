@@ -1,6 +1,6 @@
 <h1 align="center">¡Hola!, Mi nombre es Cristian Javier Arias Ordoñez</h1>
 <h6>Te comento que en estos momentos estoy haciendo un curso de Desarrollo Web Full Stack en Protalento y Dev.F.
-Estoy aprendiendo HTML, CSS, JavaScript y SQL.</h3>
+Estoy aprendiendo HTML, CSS, JavaScript y SQL.</h6>
 
 <br>
 <br>
