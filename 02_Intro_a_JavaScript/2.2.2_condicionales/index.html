@@ -4,9 +4,116 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Condicionales</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Ahom&display=swap" rel="stylesheet">
+
 </head>
 <body>
+    <!--Encabezado del HTML-->
+    <header>
+        <h1 align="center">Ejercicios Condicionales:</h1>
+    </header>
+    <!--Inicio de conternedor padre-->
+    <main class="contenedor">
+        <!--Incio de contenedor hijo-->
+        <div class="contenedor-hijo">
+            <p><b><span>1.</span></b> ¿Eres bellísimo/a?</p>
+            <input class="contenedor-escritura" id="input-ejercicio-1" type="text" onkeyup="checkEnter(event)" value="Ingrese tu texto" onfocus="this.value=''">
+            <button class="boton-enviar" id ="enter-ejercicio" type="submit" onclick="ejercicio1()">Enviar</button>
+            <h4>Resultado: <span class="span-respueta" id="resultado-1"></span></h4>
+        </div>
+        <div class="contenedor-hijo">
+            <p><b><span>2.</span></b> Por favor puedes escribir un número y te dire si es dvisible entre dos o te dire que no lo es.</p>
+            <input class="contenedor-escritura" id="input-ejercicio-2" type="text" onkeyup="checkEnter(event)" value="Ingrese tu texto" onfocus="this.value=''">
+            <button class="boton-enviar" id ="enter-ejercicio" type="submit" onclick="ejercicio2()">Enviar</button>
+            <h4>Resultado: <span class="span-respueta" id="resultado-2"></span></h4>
+        </div>
+        <div class="contenedor-hijo">
+            <p><b><span>3.</span></b> Digita un número y te dire si es para o impar.</p>
+            <input class="contenedor-escritura" id="input-ejercicio-3" type="text" onkeyup="checkEnter(event)" value="Ingrese tu texto" onfocus="this.value=''">
+            <button class="boton-enviar" id ="enter-ejercicio" type="submit" onclick="ejercicio3()">Enviar</button>
+            <h4>Resultado: <span class="span-respueta" id="resultado-3"></span></h4>
+        </div>
+        <div class="contenedor-hijo">
+            <p><b><span>4.</span></b> Por favor me escribe tu número cliente.</p>
+            <input class="contenedor-escritura" id="input-ejercicio-4" type="text" onkeyup="checkEnter(event)" value="Ingrese tu texto" onfocus="this.value=''">
+            <button class="boton-enviar" id ="enter-ejercicio" type="submit" onclick="ejercicio4()">Enviar</button>
+            <h4>Resultado: <span class="span-respueta" id="resultado-4"></span></h4>
+        </div>
+        <div class="contenedor-hijo">
+            <p><b><span>5.</span></b> Ingrese dos números y haga clic en el botón para compararlos. </p>
+            <input class="contenedor-escritura" id="input-ejercicio-5" type="text" onkeyup="checkEnter(event)" value="Ingrese el primer número" onfocus="this.value=''">
+            <input class="contenedor-escritura" id="input-ejercicio-5_1" type="text" onkeyup="checkEnter(event)"  value="Ingrese el segundo número" onfocus="this.value=''">
+            <button class="boton-enviar" id ="enter-ejercicio" type="submit" onclick="ejercicio5()">Enviar</button>
+            <h4>Resultado: <span class="span-respueta" id="resultado-5"></span></h4>
+        </div>
+        <div class="contenedor-hijo">
+            <p><b><span>6.</span></b> Ingresa por favor 3 números.</p>
+            <input class="contenedor-escritura" id="input-ejercicio-6" type="text" onkeyup="checkEnter(event)" value="Ingrese el primer número" onfocus="this.value=''">
+            <input class="contenedor-escritura" id="input-ejercicio-6-1" type="text" onkeyup="checkEnter(event)" value="Ingrese el segundo número" onfocus="this.value=''">
+            <input class="contenedor-escritura" id="input-ejercicio-6-2" type="text" onkeyup="checkEnter(event)" value="Ingrese el tercer número" onfocus="this.value=''">
+            <button class="boton-enviar" id ="enter-ejercicio" type="submit" onclick="ejercicio6()">Enviar</button>
+            <h4>Resultado: <span class="span-respueta" id="resultado-6"></span></h4>
+        </div>
+        <div class="contenedor-hijo">
+            <p><b><span>7.</span></b> Ingrese un día de la semana.</p>
+            <input class="contenedor-escritura" id="input-ejercicio-7" type="text" onkeyup="checkEnter(event)">
+            <button class="boton-enviar" id ="enter-ejercicio" type="submit" onclick="ejercicio7()">Enviar</button>
+            <h4>Resultado: <span class="span-respueta" id="resultado-7"></span></h4>
+        </div>
+        <div class="contenedor-hijo">
+            <p><b><span>8.</span></b> Ingrese una calificación entre 1 y 10:</p>
+            <input class="contenedor-escritura" id="input-ejercicio-8" type="text" onkeyup="checkEnter(event)">
+            <button class="boton-enviar" id ="enter-ejercicio" type="submit" onclick="ejercicio8()">Enviar</button>
+            <h4>Resultado: <span class="span-respueta" id="resultado-8"></span></h4>
+        </div>
+        <div class="contenedor-hijo">
+            <p><b><span>9.</span></b> Seleccione un topping para su helado:</p>
+                <input type="checkbox" id="oreo">Oreo cuesta 10 MXN.<br>
+                <input type="checkbox" id="kitkat">KitKat cuesta 15 MXN.<br>
+                <input type="checkbox" id="brownie">Brownie cuesta 20 MXN.<br>
+                <input type="checkbox" id="ninguno">sin topping cuesta 50 MXN.<br>
+            <h4>Resultado: <span class="span-respueta" id="resultado-9"></span></h4>
+        </div>
+        <div class="contenedor-hijo">
+            <p><b><span>10.</span></b> Elige tu programa de estudi0 </p>
+            <select id="nivel">
+                <option value="course">Course: $4999 MXN</option>
+                <option value="carrera">Carrera: $3999 MXN</option>
+                <option value="master">Master: $2999 MXN</option>
+            </select>
+            <br><br>
+            <p>Cuentas con alguna beca?</p>
+            <select id="beca">
+                <option value="">No</option>
+                <option value="facebook">Beca Facebook: 20% de descuento</option>
+                <option value="google">Beca Google: 15% de descuento</option>
+                <option value="jesua">Beca Jesua: 50% de descuento</option>
+            </select>
+            <br><br>
+            <!-- <input class="contenedor-escritura" id="input-ejercicio-10" type="text" onkeyup="checkEnter(event)"> -->
+            <button class="boton-enviar" id ="enter-ejercicio" type="submit" onclick="ejercicio10()">Enviar</button>
+            <h4>Resultado: <span class="span-respueta" id="resultado-10"></span></h4>
+        </div>
+        <div class="contenedor-hijo">
+            <p><b><span>11.</span></b> Realizar un programa que ayude a calcular el total a pagar de acuerdo a la distancia recorrida por un vehículo con cargo extra por los litros consumidos, tomando en consideración lo siguiente:</p>
+            <li>Si el vehículo es “coche”, el precio kilómetro ha de ser 0.20, si es “moto” ha de ser 0.10 y si es “autobús” 0.5.</li>
+            <li>Si los litros consumidos están entre 0 y 100 se ha de añadir 5 al costo total, si es mayor la cantidad de litros consumidos se ha de añadir 10 al total.</li>
+            <p>Considere qué:</p>
+            <li>Total a pagar = (precio kilometro X kms recorridos) + extra por litros consumidos.</li>
+            <p></p>
+            <input class="contenedor-escritura" id="input-ejercicio-11" type="text" onkeyup="checkEnter(event)">
+            <button class="boton-enviar" id ="enter-ejercicio" type="submit" onclick="ejercicio1()">Enviar</button>
+            <h4>Resultado: <span class="span-respueta" id="resultado-11"></span></h4>
+        </div>
+       
+    </main>
+    <!--Incio de JavaScript-->
     <script src="script.js"></script>
 </body>
 </html>
