@@ -81,35 +81,35 @@
             <h4>Resultado: <span class="span-respueta" id="resultado-9"></span></h4>
         </div>
         <div class="contenedor-hijo">
-            <p><b><span>10.</span></b> Elige tu programa de estudi0 </p>
-            <select id="nivel">
-                <option value="course">Course: $4999 MXN</option>
-                <option value="carrera">Carrera: $3999 MXN</option>
-                <option value="master">Master: $2999 MXN</option>
+            <p><b><span>10.</span></b> Elige tu programa de estudio </p>
+            <select class="contenedor-escritura" id="programa">
+                <option value="programaCourse">Course: $4999 MXN</option>
+                <option value="programaCarrera">Carrera: $3999 MXN</option>
+                <option value="programaMaster">Master: $2999 MXN</option>
             </select>
             <br><br>
             <p>Cuentas con alguna beca?</p>
-            <select id="beca">
-                <option value="">No</option>
-                <option value="facebook">Beca Facebook: 20% de descuento</option>
-                <option value="google">Beca Google: 15% de descuento</option>
-                <option value="jesua">Beca Jesua: 50% de descuento</option>
+            <select class="contenedor-escritura" id="beca">
+                <option value="ningunaBeca">Ninguna</option>
+                <option value="facebookBeca">Beca Facebook: 20% de descuento</option>
+                <option value="googleBeca">Beca Google: 15% de descuento</option>
+                <option value="jesuaBeca">Beca Jesua: 50% de descuento</option>
             </select>
-            <br><br>
-            <!-- <input class="contenedor-escritura" id="input-ejercicio-10" type="text" onkeyup="checkEnter(event)"> -->
             <button class="boton-enviar" id ="enter-ejercicio" type="submit" onclick="ejercicio10()">Enviar</button>
             <h4>Resultado: <span class="span-respueta" id="resultado-10"></span></h4>
         </div>
         <div class="contenedor-hijo">
-            <p><b><span>11.</span></b> Realizar un programa que ayude a calcular el total a pagar de acuerdo a la distancia recorrida por un vehículo con cargo extra por los litros consumidos, tomando en consideración lo siguiente:</p>
-            <li>Si el vehículo es “coche”, el precio kilómetro ha de ser 0.20, si es “moto” ha de ser 0.10 y si es “autobús” 0.5.</li>
-            <li>Si los litros consumidos están entre 0 y 100 se ha de añadir 5 al costo total, si es mayor la cantidad de litros consumidos se ha de añadir 10 al total.</li>
-            <p>Considere qué:</p>
-            <li>Total a pagar = (precio kilometro X kms recorridos) + extra por litros consumidos.</li>
-            <p></p>
-            <input class="contenedor-escritura" id="input-ejercicio-11" type="text" onkeyup="checkEnter(event)">
-            <button class="boton-enviar" id ="enter-ejercicio" type="submit" onclick="ejercicio1()">Enviar</button>
+            <p><b><span>11.</span></b> Cálculo de pago por kilómetros y litros consumidos</p>
+            <select class="contenedor-escritura" id="inputEjercicio11-1">
+                <option id="Moto"> Moto.</option>
+                <option id="Coche">Coche.</option>
+                <option id="Autobus"> Autobs.</option>
+            </select>
+            <br>
+            <input class="contenedor-escritura" id="inputEjercicio11-2" type="number" placeholder="Distancia recorrida">
+            <input class="contenedor-escritura" id="inputEjercicio11-3" type="number" placeholder="Litros Consumidos">
             <h4>Resultado: <span class="span-respueta" id="resultado-11"></span></h4>
+            <button class="boton-enviar" id ="enter-ejercicio" type="submit" onclick="ejercicio11()">Enviar</button>
         </div>
        
     </main>
