@@ -100,12 +100,12 @@
         </div>
         <div class="contenedor-hijo">
             <p><b><span>11.</span></b> Cálculo de pago por kilómetros y litros consumidos</p>
-            <select class="contenedor-escritura" id="inputEjercicio11-1">
-                <option id="Moto"> Moto.</option>
-                <option id="Coche">Coche.</option>
-                <option id="Autobus"> Autobs.</option>
-            </select>
-            <br>
+            <input class="contenedor-escritura" list="list" id="inputEjercicio11-1" placeholder="Seleccione un vehiculo">
+            <datalist id="list">
+                <option value="Moto">
+                <option value="Coche">
+                <option value="Autobús">
+            </datalist>
             <input class="contenedor-escritura" id="inputEjercicio11-2" type="number" placeholder="Distancia recorrida">
             <input class="contenedor-escritura" id="inputEjercicio11-3" type="number" placeholder="Litros Consumidos">
             <h4>Resultado: <span class="span-respueta" id="resultado-11"></span></h4>

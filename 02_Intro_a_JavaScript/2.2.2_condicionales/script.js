@@ -308,32 +308,33 @@ total. Considere qué:
 total a pagar = (precio kilometro x kms recorridos) + extra por litros
 consumidos.*/
 
-function gastoTotal(vehiculo, distancia, litros) {
-    let recorridoMoto = 0.1;
-    let recorridoCoche = 0.2;
-    let recorridoAutobus = 0.5;
+function calcularTotal(vehiculo, distancia, litros) {
+    let distanciaMoto = 0.1;
+    let distanciaCoche = 0.2;
+    let distanciaAutobus = 0.5;
     let gasolina = 0;
     if(parseFloat(litros) > 0 && parseFloat(litros) <= 100 ) {
         gasolina+=5;
     } else {
         gasolina+=10;
     }
-    if(vehiculo == "Moto") {
-        return(`El costo Total es de: ${(recorridoMoto*distancia)+gasolina}`);
-    } else if(vehiculo == "Coche") {
-        return(`El costo Total es de: ${(recorridoCoche*distancia)+gasolina}`);
+    if(vehiculo == "moto") {
+        return(`El costo total es de: ${(distanciaMoto*distancia)+gasolina}`)
+    } else if(vehiculo == "coche") {
+        return(`El costo total es de: ${(distanciaCoche*distancia)+gasolina}`)
     } else if(vehiculo == "autobus") {
-        return(`El costo Total es de: ${(recorridoAutobus*distancia)+gasolina}`);
+        return(`El costo total es de: ${(distanciaAutobus*distancia)+gasolina}`)
     }
 }
+
 function ejercicio11() {
     let vehiculo = document.getElementById("inputEjercicio11-1").value.toLowerCase();
     let distancia = document.getElementById("inputEjercicio11-2").value;
     let litros = document.getElementById("inputEjercicio11-3").value;
-    let dineroGastado = gastoTotal(vehiculo, distancia, litros);
-    let gasteTotal = document.getElementById("resultado-11");
-    gasteTotal.innerHTML = "";
-    gasteTotal.innerHTML = dineroGastado;
+    let gasolinaTotal = calcularTotal(vehiculo, distancia, litros);
+    let distanciaTotal = document.getElementById("resultado-11");
+    distanciaTotal.innerHTML = "";
+    distanciaTotal.innerHTML = gasolinaTotal;
 }
 
 /*Evento checKEnter*/
