@@ -313,20 +313,40 @@ function calcularTotal(vehiculo, distancia, litros) {
     let distanciaCoche = 0.2;
     let distanciaAutobus = 0.5;
     let gasolina = 0;
-    if(parseFloat(litros) > 0 && parseFloat(litros) <= 100 ) {
-        gasolina+=5;
+    let litroTotal = 0;
+  
+    if (!distancia || !litros || !vehiculo) {
+      return "Debe ingresar una distancia, una cantidad de litros y un tipo de vehículo válidos";
+    }
+  
+    if (isNaN(distancia) || isNaN(litros)) {
+      return "La distancia y la cantidad de litros deben ser números";
+    }
+  
+    if (parseFloat(litros) <= 0 || parseFloat(litros) > 100) {
+      return "La cantidad de litros debe ser mayor a 0 y menor o igual a 100";
+    }
+  
+    if (vehiculo !== "moto" && vehiculo !== "coche" && vehiculo !== "autobus") {
+      return "El tipo de vehículo debe ser 'moto', 'coche' o 'autobus'";
+    }
+  
+    if (parseFloat(litros) > 0 && parseFloat(litros) <= 50) {
+      gasolina += 5;
     } else {
-        gasolina+=10;
+      gasolina += 10;
     }
-    if(vehiculo == "moto") {
-        return(`El costo total es de: ${(distanciaMoto*distancia)+gasolina}`)
-    } else if(vehiculo == "coche") {
-        return(`El costo total es de: ${(distanciaCoche*distancia)+gasolina}`)
-    } else if(vehiculo == "autobus") {
-        return(`El costo total es de: ${(distanciaAutobus*distancia)+gasolina}`)
-    }
+  
+    if (vehiculo === "moto") {
+        litroTotal = distanciaMoto * distancia + gasolina;
+    } else if (vehiculo === "coche") {
+        litroTotal = distanciaCoche * distancia + gasolina;
+    } else if (vehiculo === "autobus") {
+        litroTotal = distanciaAutobus * distancia + gasolina;
+    }  
+    return `El costo total es del recorrido es: ${litroTotal}`;
 }
-
+  
 function ejercicio11() {
     let vehiculo = document.getElementById("inputEjercicio11-1").value.toLowerCase();
     let distancia = document.getElementById("inputEjercicio11-2").value;
@@ -336,6 +356,7 @@ function ejercicio11() {
     distanciaTotal.innerHTML = "";
     distanciaTotal.innerHTML = gasolinaTotal;
 }
+  
 
 /*Evento checKEnter*/
 
