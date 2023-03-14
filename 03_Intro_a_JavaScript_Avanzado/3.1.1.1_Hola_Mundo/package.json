@@ -1,0 +1,19 @@
+{
+  "name": "hola_mundo",
+  "version": "1.0.0",
+  "description": "Mi proyecto",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "init",
+    "nodejs",
+    "javascript"
+  ],
+  "author": "Cristian @armany9013",
+  "license": "ISC",
+  "dependencies": {
+    "multiple.js": "^0.0.1"
+  }
+}
