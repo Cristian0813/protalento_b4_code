@@ -1,7 +1,7 @@
 {
   "name": "hola_mundo",
   "version": "1.0.0",
-  "description": "Mi proyecto",
+  "description": "Mi primer proyecto con NodeJs",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,9 +11,6 @@
     "nodejs",
     "javascript"
   ],
-  "author": "Cristian @armany9013",
-  "license": "ISC",
-  "dependencies": {
-    "multiple.js": "^0.0.1"
-  }
+  "author": "Cristian Arias @Cristian0813",
+  "license": "ISC"
 }
