@@ -12,5 +12,11 @@
     "javascript"
   ],
   "author": "Cristian Arias @Cristian0813",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "np": "^7.6.4",
+    "omelette": "^0.4.17",
+    "request": "^2.88.2",
+    "retire": "^3.2.3"
+  }
 }
